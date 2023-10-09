@@ -41,7 +41,10 @@ console.log(filterNameStartByA( arr2 ));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
+const initialValue = 0;
 const sum = (array) => {return array.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue) };
+
+console.log(sum(arr));
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
