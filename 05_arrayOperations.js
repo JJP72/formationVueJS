@@ -67,8 +67,12 @@ console.log(sum(arr));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
+//const findUserById = (array, id) => array.find((element) => element.id === id ).name;
+// (array.find(i => i.id === id)?? {}).name ?? null;
 const findUserById = (array, id) => array.find((element) => element.id === id ).name;
 
+// gestion d'erreur
+const findUserByIdErr = (array, id) => array.find(element => element.id === id )?.name ?? "404";
 
 const array2 = [
   {id: 1, name: 'John'},
@@ -77,6 +81,7 @@ const array2 = [
   {id: 4, name: 'Bar'}
  ];
  console.log(findUserById(array2, 2) );
-
+ console.log(findUserByIdErr(array2, 5) );
+ console.log(findUserByIdErr(array2, 2) );
 
 module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};
