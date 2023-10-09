@@ -16,7 +16,7 @@
  * 
  */
 
-const getGroupName = ({group, ...rest}) => group.name ?? "erreur"
+const getGroupName = (obj) => obj?.group?.name ?? "erreur"
 
 o1 = {
        name: "John",

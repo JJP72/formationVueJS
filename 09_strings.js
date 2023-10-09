@@ -10,6 +10,9 @@
  *  - ne pas utiliser la fonction concat de String
  */
 
-const concat = (firstName, lastName) => {}
+const concat = (firstName, lastName) => `$firstName $lastName`
+
+console.log("John", "Doe");
+console.log(`${1+2}`); // syntaxe pour info
 
 module.exports = {concat};
