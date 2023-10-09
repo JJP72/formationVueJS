@@ -10,10 +10,10 @@
  * 
   */
 
-const multiplyByTwo = (array) => { return array.map((x) => x * 2) }
+const multiplyByTwo = (array) => ( array.map((x) => x * 2) );
 
-//const arr = [5, 10, 20]; 
-//console.log(multiplyByTwo(arr));
+const arr = [5, 10, 20]; 
+console.log(multiplyByTwo(arr));
 
 /**
  * Utiliser la fonction .filter sur le tableau passé en paramètre
@@ -25,10 +25,10 @@ const multiplyByTwo = (array) => { return array.map((x) => x * 2) }
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const filterNameStartByA = (array) => {return array.filter((word) => word[0] == 'A')}
+const filterNameStartByA = (array) => ( array.filter((word) => word[0] == 'A') );
 
-//const arr2 = ["Orange", "Aigre Yellow", "Green", "abcdef"]; 
-//console.log(filterNameStartByA( arr2 ));
+const arr2 = ["Orange", "Aigre Yellow", "Green", "abcdef"]; 
+console.log(filterNameStartByA( arr2 ));
 
 
 /**
@@ -42,9 +42,9 @@ const filterNameStartByA = (array) => {return array.filter((word) => word[0] == 
   */
 
 const initialValue = 0;
-const sum = (array) => {return array.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue) };
+const sum = (array) => ( array.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue) );
 
-//console.log(sum(arr));
+console.log(sum(arr));
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
@@ -65,9 +65,9 @@ const sum = (array) => {return array.reduce((accumulator, currentValue) => accum
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const findUserById = (array, id) => { return array.find((element) => element.id == id ).name };
+const findUserById = (array, id) => ( array.find((element) => element.id == id ).name );
 
-/*
+
 const array2 = [
   {id: 1, name: 'John'},
   {id: 2, name: 'Doe'},
@@ -75,6 +75,6 @@ const array2 = [
   {id: 4, name: 'Bar'}
  ];
  console.log(findUserById(array2, 2) );
-*/
+
 
 module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};
