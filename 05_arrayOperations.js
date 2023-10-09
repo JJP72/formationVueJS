@@ -42,8 +42,9 @@ console.log(filterNameStartByA( arr2 ));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const initialValue = 0;
-const sum = (array) => array.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
+const sum = (array) => array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+//const sum = (array) => array.reduce((acc, i) => acc + i, 0);
 
 console.log(sum(arr));
 
