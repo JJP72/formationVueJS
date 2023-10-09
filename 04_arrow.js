@@ -7,7 +7,7 @@
  *   - le mot clée "function" est interdis
  */
 
-let arrow1 = () => {}
+let arrow1 = (a) => {( a + 1 )}
 
 /**
  * Déclarer une fonction fléchée qui renvoi l'argument + 1
