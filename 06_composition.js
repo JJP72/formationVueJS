@@ -40,14 +40,14 @@ console.log(merge(o1, o2));
 
 /**
  * utiliser l'opérateur de composition ... afin de modifier la propriété name de l'objet
- * 
+ * et de CONSERVER les autres attributs
  * ex: {name: 'toto'}, 'titi' => {name: 'titi'}
  * 
  * contrainte:
  *  - interdiction d'utiliser l'opérateur d'affectation "="
  */
 
-const setName = (obj, name) => ({ name: name })
+const setName = (obj, name) => ({ ...obj, name: name })
 
 o3 = { name: 'toto' };
 console.log(setName(o3, 'titi'));
