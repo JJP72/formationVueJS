@@ -10,7 +10,7 @@
  * 
   */
 
-const multiplyByTwo = (array) => ( array.map((x) => x * 2) );
+const multiplyByTwo = (array) => array.map((x) => x * 2);
 
 const arr = [5, 10, 20]; 
 console.log(multiplyByTwo(arr));
@@ -25,7 +25,8 @@ console.log(multiplyByTwo(arr));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const filterNameStartByA = (array) => ( array.filter((word) => word[0] == 'A') );
+const filterNameStartByA = (array) => array.filter((word) => word[0] === 'A');
+// ==> word.startsWith("A") mieux que la case 0 (si elle est vide)
 
 const arr2 = ["Orange", "Aigre Yellow", "Green", "abcdef"]; 
 console.log(filterNameStartByA( arr2 ));
@@ -42,7 +43,7 @@ console.log(filterNameStartByA( arr2 ));
   */
 
 const initialValue = 0;
-const sum = (array) => ( array.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue) );
+const sum = (array) => array.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue);
 
 console.log(sum(arr));
 
@@ -65,7 +66,7 @@ console.log(sum(arr));
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const findUserById = (array, id) => ( array.find((element) => element.id == id ).name );
+const findUserById = (array, id) => array.find((element) => element.id == id ).name;
 
 
 const array2 = [
