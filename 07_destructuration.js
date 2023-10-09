@@ -14,6 +14,8 @@
 
 const extractFirstTwo = ([a,b]) => [a, b]
 
+// const  [c1, c2] = arr
+// return [c1, c2];
 let a1 = [1, 2, 3];
 console.log(extractFirstTwo(a1));
 
@@ -24,7 +26,8 @@ console.log(extractFirstTwo(a1));
  * exemple: [1, 2, 3] => [2, 3]
  */
 
-const extractRest = ([a, ...rest]) => [...rest]
+//const extractRest = ([a, ...rest]) => [...rest]
+  const extractRest = ([, ...r]) => r
 
 let a2 = [1, 2, 3];
 console.log(extractRest(a2));
@@ -41,7 +44,8 @@ console.log(extractRest(a2));
  * - interdiction d'utiliser l'opérateur "." pour accéder au champ "name"
  */
 
-const extractName = ({name, ...rest}) => (name)
+//const extractName = ({name, ...rest}) => (name)
+  const extractName = ({name}) => name
 
 let o1 = {name: "toto", age: 42} ;
 console.log(extractName(o1));
@@ -57,7 +61,7 @@ console.log(extractName(o1));
  * 
  */
 
-const removePassword = ({ name, ...rest }) => ({name});
+const removePassword = ({ password, ...r }) => r;
 
 let o2 = {name: "toto", password: "1234"};
 console.log(removePassword(o2));
