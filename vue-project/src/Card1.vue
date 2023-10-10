@@ -5,37 +5,33 @@ const myClass = ref("");
 
 const props = defineProps(["title","buttonText", "color"]);
 
-const emit = defineEmits(["cliclic"]);
-
+const handler = () => {
+    console.log("click !");
+};
 const addClass = (valeur) => { myClass.value = valeur};
 addClass( props.color );
 </script>
 
 <template>
   <div className="container">
-    <h5 className="title">{{ props.title }}</h5>
+    <h5 className="title">Special title treatment : {{ props.title }}</h5>
     <p className="content">
         <slot>valeur par defaut.</slot>
     </p>
- 
+    <h1 :class="myClass">{{  myClass }}</h1>
     <button 
       className="button"
       :class="myClass"
-      @click="emit('cliclic')" >
+      @click.once="addClass( 'title' )" >
       {{ props.buttonText }}
     </button>
-   
-    <!-- @click.once="addClass( props.color )"  :class="['button', myClass]"   -->
-    <!--  v-on:click => @click 
-         <h1 :class="myClass">{{  myClass }}</h1>
-    <hr />
+    <!-- @click.once="addClass( props.color )" -->
+    <!--  v-on:click => @click -->
     <button 
       :className="props.color"
        > button 2 
       {{ props.buttonText }}
     </button>
-     {{ counter.value }}
-  -->
     </div>
 </template>
  

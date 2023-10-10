@@ -13,7 +13,7 @@ addClass( props.color );
 
 <template>
   <div className="container">
-    <h5 className="title">{{ props.title }}</h5>
+    <h5 className="title">Special title treatment : {{ props.title }}</h5>
     <p className="content">
         <slot>valeur par defaut.</slot>
     </p>
